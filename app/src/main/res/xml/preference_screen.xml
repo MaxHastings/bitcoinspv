@@ -1,0 +1,73 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="preference_screen">
+
+    <PreferenceCategory android:title="@string/secure_category"
+        android:key="@string/security_key">
+
+        <Preference
+            android:key="@string/change_password_button"
+            android:title="@string/pref_change_password_title" />
+        <CheckBoxPreference
+            android:key="@string/lock_transactions_key"
+            android:summary="@string/pref_lock_transaction_summary"
+            android:title="@string/pref_lock_transaction_title" />
+        <CheckBoxPreference
+            android:key="@string/fingerprint_enabled_key"
+            android:summary="@string/pref_finger_print_summary"
+            android:title="@string/pref_finger_print_title"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="@string/secure_window_key"
+            android:summary="@string/pref_secure_window_summary"
+            android:title="@string/pref_secure_window_title"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/currencyTitle"
+        android:key="currency">
+        <ListPreference
+            android:key="fiatType"
+            android:entries="@array/fiat_currency_entries"
+            android:entryValues="@array/fiat_currency_values"
+            android:defaultValue="@string/default_fiat_value"
+            android:title="@string/fiatType" />
+        <Preference
+            android:key="refreshFiat"
+            android:title="@string/refreshButton" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_wallet_title"
+        android:key="wallet">
+        <Preference
+            android:key="@string/view_contacts_key"
+            android:title="@string/view_contacts_button" />
+        <Preference
+            android:key="@string/export_wallet_button"
+            android:title="@string/pref_export_wallet_title" />
+        <Preference
+            android:key="@string/view_seed_button"
+            android:title="@string/pref_view_seed_title" />
+        <Preference
+            android:key="@string/delete_wallet_button"
+            android:title="@string/pref_delete_wallet_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/language_category"
+        android:key="language">
+        <ListPreference
+            android:key="languageType"
+            android:entries="@array/language_entries"
+            android:entryValues="@array/language_values"
+            android:summary="%s"
+            android:defaultValue="@string/default_language_value" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_category_more"
+        android:key="moreCategory">
+        <Preference
+            android:key="aboutKey"
+            android:title="@string/pref_about" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
