@@ -1,4 +1,4 @@
-# VeriMobile
+# Bitcoin SPV Wallet
 Official Repository
 
 Wallet is currently in development.
